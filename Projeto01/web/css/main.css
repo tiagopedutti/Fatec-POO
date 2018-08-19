@@ -1,0 +1,88 @@
+/*Formatações padrão para todos os documentos*/
+html{font-family: 'Helvetica', sans-serif}
+
+/***** Tamanho padrão das fontes *****/
+
+/*Tamanho da fonte dos cabeçalhos*/
+header .title{font-size: 3rem}
+header .page-title{font-size: 2rem}
+
+/*Tamanho da fonte das seções de conteúdo*/
+.content .title{font-size: 1.5rem}
+.content .text{font-size: 1.2rem}
+
+/*Tamanho da fonte da seção credits*/
+.credits ul{font-size: 1.1rem}
+
+/*Tamanho da fonte de componentes*/
+.btn{font-size: 1.1rem}
+
+/*************************************/
+
+
+/***** Formatação padrão das páginas *****/
+
+/*Corpo*/
+body{
+    background-color: #eee; 
+    margin: 0
+}
+
+/*Cabeçalho*/
+header{
+    background-color: #03a9f4;
+    box-shadow: 1px 1px 3px #aaa;
+    color: #fff;
+    text-align: center;
+    margin: 0 1rem;
+}
+header h1, header h2{margin: 0; padding: 1rem}
+
+/*Conteúdo principal*/
+.content{
+    background-color: #fff; 
+    box-shadow: 1px 1px 3px #aaa;
+    padding: 2rem 2rem;
+    margin: 0 1rem;
+}
+.content .title{
+    border-bottom: 4px solid #2196F3;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+.content .text{
+    margin: 0 10vw;
+}
+
+/*Seções de conteúdo*/
+.content section{
+    margin: 10px 0;
+}
+
+/*Creditos*/
+.credits ul{
+    list-style-type: none;
+}
+
+/*****************************************/
+
+/***** Classes de Componentes *****/
+
+/*Centralizar texto*/
+.text-center{text-align: center}
+
+/*Botões*/
+.btn{
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 15px;
+    outline: none;
+    margin: 5px;
+}
+
+/*Botão cor primária*/
+.btn-primary{background-color: #03a9f4; transition: background-color .2s}
+.btn-primary:hover{background-color: #2196F3; cursor: pointer;}
+
+/**********************************/
