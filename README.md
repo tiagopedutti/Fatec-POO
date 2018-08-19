@@ -1,4 +1,4 @@
-# Fatec-POO
+# FATEC - Projetos da aula de POO
 
 <br/>
 
