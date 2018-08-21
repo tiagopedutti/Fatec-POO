@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Juros Compostos</title>
+  <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1 align='center'>Cálculo de Juros Simples</h1>
+<div id='menu'>
+<ul>
+<li><a href='index.html'>Home  </a></li>
+<li><a href='juros-simples.html' >Juros Simples  </a></li>
+<li><a href='juros-composto.html' >Juros Composto</a></li>
+</ul>
+</div>
+</body>
+<h1>Cálculo de Juros Compostos</h1>
+<div style='float:left; margin-right: 200px;'>
+<form>
+<p>Capital: <input required type='number' min='0' name='c' step='0.01'> 
+<p>Taxa de Juros (% ao mês): <input required type='number' min='0' name='i' step='0.01'> 
+<p>Tempo total (meses): <input required type='number' min='1' name='t' step='0.01'>
+<p><input required type='submit' value='Calcular'></p>
+</form>
+<h3 style='color:red'>Preencha os campos corretamente!</h3>
+<h3 style='color:red;'></h3>
+<h3><a href='index.html'>Voltar</a></h3>
+</div>
+<div>
+<table table border='1'>
+<tr><th>Mês</th> <th>Juros</th> <th>Montante</th></tr>
+<table>
+</div>
+</body>
+</html>
+
