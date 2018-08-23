@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Tiago
  */
-@WebServlet(name = "HomeServlet", urlPatterns = {"/home"})
+@WebServlet(name = "HomeServlet", urlPatterns = {"/index.html"})
 public class HomeServlet extends HttpServlet {
 
     /**
@@ -74,8 +74,8 @@ public class HomeServlet extends HttpServlet {
                     out.println("<section>");
                         out.println("<h3 class='title'>Selecione o cálculo que você deseja realizar</h3>");
                         out.println("<nav>");
-                            out.println("<a href='#'><button class='btn btn-primary' type='button'>Juros Simples</button></a>");
-                            out.println("<a href='#'><button class='btn btn-primary' type='button'>Juros Compostos</button></a>");
+                            out.println("<a href='juros-simples.html'><button class='btn btn-primary' type='button'>Juros Simples</button></a>");
+                            out.println("<a href='juros-composto.html'><button class='btn btn-primary' type='button'>Juros Compostos</button></a>");
                         out.println("</nav>");
                     out.println("</section>");
                     
