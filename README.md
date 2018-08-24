@@ -5,8 +5,8 @@
 ## Projeto01
 
 ### Membros do grupo e suas funções
-- [Nenhum] - Front-end do Servlet **home** (HTML e CSS)
+- [Tiago Benitez Pedutti] - Front-end do Servlet **home** (HTML e CSS)
 - [Nenhum] - Front-end do Servlet **juros-simples** (HTML e CSS)
-- [Nenhum] - Front-end do Servlet **juros-composto** (HTML e CSS)
-- [Nenhum] - Back-end do Servlet **juros-simples** (Código Java)
-- [Nenhum] - Back-end do Servlet **juros-compostos** (Código Java)
+- [Julio César Takeda] - Front-end do Servlet **juros-composto** (HTML e CSS)
+- [Sidney Almeida] - Back-end do Servlet **juros-simples** (Código Java)
+- [Lucas Martins Garcia] - Back-end do Servlet **juros-compostos** (Código Java)
