@@ -64,18 +64,18 @@ public class HomeServlet extends HttpServlet {
                         out.println("<h3 class='title'>Créditos da nossa equipe</h3>");
                         out.println("<ul>");
                                 out.println("<li><b>Tiago Benitez Pedutti</b> - Servlet Home</li>");
-                                out.println("<li><b>Fulano</b> - <i>Front-end</i> Servlet Juros Simples</li>");
-                                out.println("<li><b>Fulano</b> - <i>Back-end</i> Servlet Juros Simples</li>");
-                                out.println("<li><b>Fulano</b> - <i>Front-end</i> Servlet Juros Compostos</li>");
-                                out.println("<li><b>Fulano</b> - <i>Back-end</i> Servlet Juros Compostos</li>");
+                                out.println("<li><b>Ernandes Roberto Papa Braga</b> - <i>Front-end</i> Servlet Juros Simples</li>");
+                                out.println("<li><b>Sidney Almeida</b> - <i>Back-end</i> Servlet Juros Simples</li>");
+                                out.println("<li><b>Julio Cesar Takeda</b> - <i>Front-end</i> Servlet Juros Compostos</li>");
+                                out.println("<li><b>Lucas Martins Garcia</b> - <i>Back-end</i> Servlet Juros Compostos</li>");
                         out.println("</ul>");
                     out.println("</section>");
                     
                     out.println("<section>");
                         out.println("<h3 class='title'>Selecione o cálculo que você deseja realizar</h3>");
                         out.println("<nav>");
-                            out.println("<a href='juros-simples.html'><button class='btn btn-primary' type='button'>Juros Simples</button></a>");
-                            out.println("<a href='juros-composto.html'><button class='btn btn-primary' type='button'>Juros Compostos</button></a>");
+                            out.println("<a href='jurosSimples'><button class='btn btn-primary' type='button'>Juros Simples</button></a>");
+                            out.println("<a href='jurosCompostos'><button class='btn btn-primary' type='button'>Juros Compostos</button></a>");
                         out.println("</nav>");
                     out.println("</section>");
                     

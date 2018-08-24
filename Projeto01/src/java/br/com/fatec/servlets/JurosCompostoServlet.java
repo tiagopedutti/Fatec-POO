@@ -19,7 +19,7 @@ import java.text.DecimalFormat;
  *
  * @author Lucas Martins
  */
-@WebServlet(name = "JurosCompostoServlet", urlPatterns = {"/juros_composto.html"})
+@WebServlet(name = "JurosCompostoServlet", urlPatterns = {"/jurosCompostos"})
 public class JurosCompostoServlet extends HttpServlet {
 
     /**
@@ -38,20 +38,33 @@ public class JurosCompostoServlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet JurosCompostoServlet</title>");            
-            out.println("</head>");
+            
+                out.println("<head>");
+                    out.println("<title>Servlet JurosCompostoServlet</title>");            
+                out.println("</head>");
+                
             out.println("<body>");
-            out.println("<h1>Servlet JurosCompostoServlet at " + request.getContextPath() + "</h1>");
-            double c = Double.parseDouble(request.getParameter("C"));
-            double i =  1 + (Double.parseDouble(request.getParameter("i"))/100);
-            int n = Integer.parseInt(request.getParameter("n"));
-            double potencia = Math.pow(i, n);
-            double m = c * potencia;
-            out.println("<h1> Montante de " + c + " por " + i + "% " + "por " + n + "meses é " + new DecimalFormat("0.00").format(m) + "</h1>");
-            out.println("<h1><a href= juros-simples.html> Juros Simples </a></h1>");
-            out.println("<h3><a href='index.html'>Voltar</a></h3>");
+            
+                out.println("<h1>Servlet JurosCompostoServlet at " + request.getContextPath() + "</h1>");
+                
+                out.println("<form>");
+                        out.println("<label>Capital:</label> <input type='text' pattern='[0-9]+$' name='C' required> ");
+                        out.println("<label>Taxa de Juros (% ao mês):</label> <input type='text' name='i' required> ");
+                        out.println("<label>Tempo total (meses):</label><input type='text' pattern='[0-9]+$' name='n' required>");
+                        out.println("<input type='submit' value='Calcular'>");
+                out.println("</form>");
+                
+                double c = Double.parseDouble(request.getParameter("C"));
+                double i =  1 + (Double.parseDouble(request.getParameter("i"))/100);
+                int n = Integer.parseInt(request.getParameter("n"));
+                double potencia = Math.pow(i, n);
+                double m = c * potencia;
+                
+                out.println("<h1> Montante de " + c + " por " + i + "% " + "por " + n + "meses é " + new DecimalFormat("0.00").format(m) + "</h1>");
+                out.println("<h3><a href='index.html'>Voltar</a></h3>");
+                
             out.println("</body>");
+            
             out.println("</html>");
         }
     }
