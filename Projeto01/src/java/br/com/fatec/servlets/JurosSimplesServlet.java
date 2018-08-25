@@ -46,8 +46,8 @@ public class JurosSimplesServlet extends HttpServlet {
                     out.println("<div id='menu'>");
                         out.println("<ul>");
                             out.println("<li><a href='index.html'> Home  </a></li>");
-                            out.println("<li><a href='juros-simples.html' >Juros Simples  </a></li>");
-                            out.println("<li><a href='juros-composto.html' >Juros Composto</a></li>");
+                            out.println("<li><a href='jurosSimples' >Juros Simples  </a></li>");
+                            out.println("<li><a href='jurosCompostos' >Juros Composto</a></li>");
                         out.println("</ul>");
                     out.println("</div>");
                     out.println("<form>");
