@@ -40,47 +40,73 @@ public class HomeServlet extends HttpServlet {
             out.println("<head>");
                 out.println("<meta charset='UTF-8'/>");
                 out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'/>");
-                out.println("<link rel='stylesheet' type='text/css' href='css/main.css'/>");
+                out.println("<link rel='stylesheet' type='text/css' href='libs/bootstrap/bootstrap.min.css'/>");
+                out.println("<style>.card{height: 100%}</style>");
+//                out.println("<link rel='stylesheet' type='text/css' href='css/main.css'/>");
                 out.println("<title>Home</title>");            
             out.println("</head>");
             
             out.println("<body>");
-            
-                out.println("<header>");
-                    out.println("<h1 class='title'>Projeto 01</h1>");
-                    out.println("<h2 class='page-title'>Home</h2>");
-                out.println("</header>");
-
-                out.println("<main class='content text-center'>");
+                out.println("<div class='container-fluid'>");
                 
-                    out.println("<section>");
-                        out.println("<h3 class='title'>Sobre o projeto</h3>");
-                        out.println("<p class='text'>O projeto gira em torno de dois principais servlets.<br/> "
-                                + "Ambos os componentes possuem um formulário, que irá retornar como resultado, o montante de uma aplicação inicial.<br/>"
-                                + "Um servlet realiza o cálculo aplicando juros simples, e o outro, juros compostos!</p>");
-                    out.println("</section>");
-                    
-                    out.println("<section class='credits'>");
-                        out.println("<h3 class='title'>Créditos da nossa equipe</h3>");
-                        out.println("<ul>");
-                                out.println("<li><b>Tiago Benitez Pedutti</b> - Servlet Home</li>");
-                                out.println("<li><b>Ernandes Roberto Papa Braga</b> - <i>Front-end</i> Servlet Juros Simples</li>");
-                                out.println("<li><b>Sidney Almeida</b> - <i>Back-end</i> Servlet Juros Simples</li>");
-                                out.println("<li><b>Julio Cesar Takeda</b> - <i>Front-end</i> Servlet Juros Compostos</li>");
-                                out.println("<li><b>Lucas Martins Garcia</b> - <i>Back-end</i> Servlet Juros Compostos</li>");
-                        out.println("</ul>");
-                    out.println("</section>");
-                    
-                    out.println("<section>");
-                        out.println("<h3 class='title'>Selecione o cálculo que você deseja realizar</h3>");
-                        out.println("<nav>");
-                            out.println("<a href='jurosSimples'><button class='btn btn-primary' type='button'>Juros Simples</button></a>");
-                            out.println("<a href='jurosCompostos'><button class='btn btn-primary' type='button'>Juros Compostos</button></a>");
-                        out.println("</nav>");
-                    out.println("</section>");
-                    
-                out.println("</main>");
-            
+                    out.println("<header class='jumbotron text-center text-light' style='background: linear-gradient(to bottom right, #4cc0fb, #007bff)'>");
+                        out.println("<h1 class='display-2'>Cálculo de Juros</h1>");
+                        out.println("<h2 class='display-4'>Projeto 01</h2>");
+                    out.println("</header>");
+
+                    out.println("<main class='text-center'>");
+                        
+                        out.println("<div class='row'>");
+                            
+                            
+                        out.println("<div class='col-md-6'>");
+                            out.println("<div class='card'>");
+                                out.println("<h5 class='card-header bg-primary text-light'>Sobre</h5>");
+                                out.println("<div class='card-body'>");
+                                  out.println("<h5 class='card-title'>Sobre o Projeto</h5>");
+                                    out.println("<p class='card-text'>O projeto gira em torno de dois principais servlets.<br/> "
+                                            + "Ambos os componentes possuem um formulário, que irá retornar como resultado, o montante de uma aplicação inicial.<br/>"
+                                            + "Um servlet realiza o cálculo aplicando juros simples, e o outro, juros compostos!</p>");
+                                out.println("</div>");
+                            out.println("</div>");
+                        out.println("</div>");
+                            
+                        out.println("<div class='col-md-6'>");
+                            out.println("<div class='card'>");
+                                out.println("<h5 class='card-header bg-primary text-light'>Equipe</h5>");
+                                out.println("<div class='card-body'>");
+                                  out.println("<h5 class='card-title'>Créditos da nossa equipe</h5>");
+                                    out.println("<ul class='text-left'>");
+                                        out.println("<li><b>Tiago Benitez Pedutti</b> - Servlet Home</li>");
+                                        out.println("<li><b>Ernandes Roberto Papa Braga</b> - <i>Front-end</i> Servlet Juros Simples</li>");
+                                        out.println("<li><b>Sidney Almeida</b> - <i>Back-end</i> Servlet Juros Simples</li>");
+                                        out.println("<li><b>Julio Cesar Takeda</b> - <i>Front-end</i> Servlet Juros Compostos</li>");
+                                        out.println("<li><b>Lucas Martins Garcia</b> - <i>Back-end</i> Servlet Juros Compostos</li>");
+                                    out.println("</ul>");
+                                out.println("</div>");
+                            out.println("</div>");
+                        out.println("</div>");
+                            
+                        out.println("<div class='offset-3 col-md-6 my-5'>");
+                            out.println("<div class='card'>");
+                                out.println("<h5 class='card-header bg-primary text-light'>Cálculos</h5>");
+                                out.println("<div class='card-body'>");
+                                  out.println("<h5 class='card-title'>Selecione o cálculo que você deseja realizar</h5>");
+                                    out.println("<nav>");
+                                        out.println("<a href='jurosSimples'><button class='btn btn-primary' type='button'>Juros Simples</button></a>");
+                                        out.println("<a href='jurosCompostos'><button class='btn btn-primary' type='button'>Juros Compostos</button></a>");
+                                    out.println("</nav>");
+                                out.println("</div>");
+                            out.println("</div>");
+                        out.println("</div>");
+                            
+                        out.println("</div>");
+
+                    out.println("</main>");
+                out.println("</div>");
+                out.println("<script src='libs/jquery/jquery-3.2.1.slim.min.js'/>");
+                out.println("<script src='libs/bootstrap/popper.min.js'/>");
+                out.println("<script src='libs/bootstrap/bootstrap.min.js'/>");
             out.println("</body>");
             
             out.println("</html>");

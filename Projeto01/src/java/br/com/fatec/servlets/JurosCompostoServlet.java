@@ -40,29 +40,45 @@ public class JurosCompostoServlet extends HttpServlet {
             out.println("<html>");
             
                 out.println("<head>");
-                    out.println("<title>Servlet JurosCompostoServlet</title>");            
+                out.println("<meta charset='UTF-8'/>");
+                out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'/>");
+                    out.println("<title>Servlet JurosCompostoServlet</title>");  
+                    out.println("<link rel='stylesheet' type='text/css' href='libs/bootstrap/bootstrap.min.css'/>");
                 out.println("</head>");
                 
             out.println("<body>");
-            
-                out.println("<h1>Servlet JurosCompostoServlet at " + request.getContextPath() + "</h1>");
                 
-                out.println("<form>");
-                        out.println("<label>Capital:</label> <input type='text' pattern='[0-9]+$' name='C' required> ");
-                        out.println("<label>Taxa de Juros (% ao mês):</label> <input type='text' name='i' required> ");
-                        out.println("<label>Tempo total (meses):</label><input type='text' pattern='[0-9]+$' name='n' required>");
-                        out.println("<input type='submit' value='Calcular'>");
-                out.println("</form>");
+                out.println("<div class='container-fluid'>");
+                    
+                    out.println("<div class='row'>");
+                        out.println("<div class='offset-md-4 col-md-4'>");
+                            out.println("<h1 class='text-center'>Juros Compostos</h1>");
+
+                            out.println("<form class='form-row'>");
+                                    out.println("<div class='form-group col-md-4'><label>Capital:</label> <input class='form-control' type='text' pattern='[0-9]+$' name='C' required></div>");
+                                    out.println("<div class='form-group col-md-4'><label>Taxa de Juros (% ao mês):</label> <input class='form-control' type='text' name='i' required></div>");
+                                    out.println("<div class='form-group col-md-4'><label>Tempo total (meses):</label><input class='form-control' type='text' pattern='[0-9]+$' name='n' required></div>");
+                                    out.println("<input class='offset-4 col-md-4 btn btn-success' type='submit' value='Calcular'>");
+                            out.println("</form>");
+
+                            double c = Double.parseDouble(request.getParameter("C"));
+                            double i =  1 + (Double.parseDouble(request.getParameter("i"))/100);
+                            int n = Integer.parseInt(request.getParameter("n"));
+                            double potencia = Math.pow(i, n);
+                            double m = c * potencia;
+                            
+                            out.println("<div class='alert alert-success my-3' role='alert'>");
+                                out.println("<b>Resultado: </b>Montante de " + c + " por " + i + "% " + " por " + n + " meses é " + new DecimalFormat("0.00").format(m));
+                            out.println("</div>");
+                        out.println("</div>");
+                        
+                    out.println("</div>");
+                    
+                out.println("</div>");
                 
-                double c = Double.parseDouble(request.getParameter("C"));
-                double i =  1 + (Double.parseDouble(request.getParameter("i"))/100);
-                int n = Integer.parseInt(request.getParameter("n"));
-                double potencia = Math.pow(i, n);
-                double m = c * potencia;
-                
-                out.println("<h1> Montante de " + c + " por " + i + "% " + "por " + n + "meses é " + new DecimalFormat("0.00").format(m) + "</h1>");
-                out.println("<h3><a href='index.html'>Voltar</a></h3>");
-                
+                out.println("<script src='libs/jquery/jquery-3.2.1.slim.min.js'/>");
+                out.println("<script src='libs/bootstrap/popper.min.js'/>");
+                out.println("<script src='libs/bootstrap/bootstrap.min.js'/>");
             out.println("</body>");
             
             out.println("</html>");

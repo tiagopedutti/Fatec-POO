@@ -40,30 +40,42 @@ public class JurosSimplesServlet extends HttpServlet {
                     out.println("<title>Servlet SimplesServlet</title>");
                     out.println("<meta charset='UTF-8'>");
                     out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+                    out.println("<link rel='stylesheet' type='text/css' href='libs/bootstrap/bootstrap.min.css'/>");
                 out.println("</head>");
                 out.println("<body>");
-                    out.println("<h1 align='center'>Cálculo de Juros Simples</h1>");
-                    out.println("<div id='menu'>");
-                        out.println("<ul>");
-                            out.println("<li><a href='index.html'> Home  </a></li>");
-                            out.println("<li><a href='juros-simples.html' >Juros Simples  </a></li>");
-                            out.println("<li><a href='juros-composto.html' >Juros Composto</a></li>");
-                        out.println("</ul>");
+                
+                out.println("<div class='container-fluid'>");
+                    
+                    out.println("<div class='row'>");
+                        out.println("<div class='offset-md-4 col-md-4'>");
+                            out.println("<h1 class='text-center'>Juros Simples</h1>");
+
+                            out.println("<form class='form-row'>");
+                                    out.println("<div class='form-group col-md-4'><label>Capital:</label> <input class='form-control' type='text' pattern='[0-9]+$' name='capital' required></div>");
+                                    out.println("<div class='form-group col-md-4'><label>Taxa de Juros (% ao mês):</label> <input class='form-control' type='text' name='taxa' required></div>");
+                                    out.println("<div class='form-group col-md-4'><label>Tempo total (meses):</label><input class='form-control' type='text' pattern='[0-9]+$' name='meses' required></div>");
+                                    out.println("<input class='offset-4 col-md-4 btn btn-success' type='submit' value='Calcular'>");
+                            out.println("</form>");
+
+                            double capital = Double.parseDouble(request.getParameter("capital"));
+                            double taxa = Double.parseDouble(request.getParameter("taxa"));
+                            int meses = Integer.parseInt(request.getParameter("meses"));
+                            double juros = capital*(taxa/100)*meses;
+                            double resultado = capital+juros;
+                            
+                            out.println("<div class='alert alert-success my-3' role='alert'>");
+                                out.println("<b>Resultado: </b>Montante de " + capital + " por " + taxa + "% " + " por " + meses + " meses é " + resultado);
+                            out.println("</div>");
+                        out.println("</div>");
+                        
                     out.println("</div>");
-                    out.println("<form>");
-                        out.println("<p>Capital: <input type='text' name='capital' required> ");
-                        out.println("<p>Taxa de Juros (% ao mês): <input type='text' name='taxa' required> ");
-                        out.println("<p>Tempo total (meses): <input type='text' pattern='[0-9]+$' name='meses' required>");
-                        out.println("<p><input type='submit' value='Calcular'></p>");
-                    out.println("</form>");
-                    double capital = Double.parseDouble(request.getParameter("capital"));
-                    double taxa = Double.parseDouble(request.getParameter("taxa"));
-                    int meses = Integer.parseInt(request.getParameter("meses"));
-                    double juros = capital*(taxa/100)*meses;
-                    double resultado = capital+juros;
-                    out.println("<h3 style='color:red;'>Montante: "+resultado+"</h3>");
-                    out.println("<h3 style='color:red;'>Juros: "+juros+"</h3>");
-                    out.println("<h3><a href='index.html'>Voltar</h3>");
+                    
+                out.println("</div>");
+                
+                out.println("<script src='libs/jquery/jquery-3.2.1.slim.min.js'/>");
+                out.println("<script src='libs/bootstrap/popper.min.js'/>");
+                out.println("<script src='libs/bootstrap/bootstrap.min.js'/>");
+                
                 out.println("</body>");
             out.println("</html>");
         }
