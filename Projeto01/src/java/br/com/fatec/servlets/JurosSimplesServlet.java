@@ -51,7 +51,7 @@ public class JurosSimplesServlet extends HttpServlet {
                         out.println("</ul>");
                     out.println("</div>");
                     out.println("<form>");
-                        out.println("<p>Capital: <input type='text' pattern='[0-9]+$' name='capital' required> ");
+                        out.println("<p>Capital: <input type='text' name='capital' required> ");
                         out.println("<p>Taxa de Juros (% ao mês): <input type='text' name='taxa' required> ");
                         out.println("<p>Tempo total (meses): <input type='text' pattern='[0-9]+$' name='meses' required>");
                         out.println("<p><input type='submit' value='Calcular'></p>");
