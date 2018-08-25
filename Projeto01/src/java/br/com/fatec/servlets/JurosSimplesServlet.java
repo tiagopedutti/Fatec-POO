@@ -51,9 +51,9 @@ public class JurosSimplesServlet extends HttpServlet {
                             out.println("<h1 class='text-center'>Juros Simples</h1>");
 
                             out.println("<form class='form-row'>");
-                                    out.println("<div class='form-group col-md-4'><label>Capital:</label> <input class='form-control' type='text' pattern='[0-9]+$' name='capital' required></div>");
-                                    out.println("<div class='form-group col-md-4'><label>Taxa de Juros (% ao mês):</label> <input class='form-control' type='text' name='taxa' required></div>");
-                                    out.println("<div class='form-group col-md-4'><label>Tempo total (meses):</label><input class='form-control' type='text' pattern='[0-9]+$' name='meses' required></div>");
+                                    out.println("<div class='form-group col-md-6'><label>Capital:</label> <input class='form-control' type='text' pattern='[0-9]+$' name='capital' required></div>");
+                                    out.println("<div class='form-group col-md-6'><label>Taxa de Juros (% ao mês):</label> <input class='form-control' type='text' name='taxa' required></div>");
+                                    out.println("<div class='form-group offset-3 col-md-6'><label>Tempo total (meses):</label><input class='form-control' type='text' pattern='[0-9]+$' name='meses' required></div>");
                                     out.println("<input class='offset-4 col-md-4 btn btn-success' type='submit' value='Calcular'>");
                             out.println("</form>");
 
